@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Advertisements>
+  <Ad>
+    <ImageUrl>banner1.png</ImageUrl>
+    <NavigateUrl>banner_1_1.png</NavigateUrl>
+    <AlternateText>Google</AlternateText>
+    <Impressions>50</Impressions>
+    <Keyword>b1</Keyword>
+  </Ad>
+  <Ad>
+    <ImageUrl>banner2.png</ImageUrl>
+    <NavigateUrl>banner_1_2.png</NavigateUrl>
+    <AlternateText>Yandex</AlternateText>
+    <Impressions>50</Impressions>
+    <Keyword>b1</Keyword>
+  </Ad>
+  <Ad>
+    <ImageUrl>banner3.png</ImageUrl>
+    <NavigateUrl>banner_2_1.png</NavigateUrl>
+    <AlternateText>Google</AlternateText>
+    <Impressions>50</Impressions>
+    <Keyword>b2</Keyword>
+  </Ad>
+  <Ad>
+    <ImageUrl>banner4.png</ImageUrl>
+    <NavigateUrl>banner_2_2.png</NavigateUrl>
+    <AlternateText>Yandex</AlternateText>
+    <Impressions>50</Impressions>
+    <Keyword>b2</Keyword>
+  </Ad>
+  <!-- И т.д. -->
+</Advertisements>

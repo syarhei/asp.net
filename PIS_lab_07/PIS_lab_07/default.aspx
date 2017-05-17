@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="default.aspx.cs" Inherits="PIS_lab_06._default" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="default.aspx.cs" Inherits="PIS_lab_07._default" %>
 
 <!DOCTYPE html>
 
@@ -8,7 +8,10 @@
     <title></title>
 </head>
 <body>
-    <a href="AAA.aspx" title="AAA">AAA</a>
-    <a href="BBB.aspx" title="BBB">BBB</a>
+    <form id="form1" runat="server">
+    <div>
+    
+    </div>
+    </form>
 </body>
 </html>

@@ -12,12 +12,17 @@ namespace PIS_lab_06 {
         }
 
         protected void CustomValidatorPass_ServerValidate(object source, ServerValidateEventArgs args) {
-            string password = args.Value as string;
+            try {
+                string password = args.Value as string;
 
-            HashSet<char> passHash = new HashSet<char>(password);
+                HashSet<char> passHash = new HashSet<char>(password);
 
-            if (passHash.Count() != password.Count() || password.Length > 7)
+                if (passHash.Count() != password.Count() || password.Length > 7)
+                    args.IsValid = false;
+            }
+            catch {
                 args.IsValid = false;
+            }
         }
     }
 }

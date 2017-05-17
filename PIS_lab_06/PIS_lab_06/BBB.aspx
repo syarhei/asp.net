@@ -74,7 +74,8 @@
         MinimumValue="01.01.0001" Type="Date" ValidationGroup="v1"></asp:RangeValidator>
         
         <asp:CustomValidator ID="CustomValidatorPass" runat="server" ErrorMessage="Введие пароль из неповторяющхся символов"
-        ControlToValidate="pass" Display="None" OnServerValidate="CustomValidatorPass_ServerValidate"
+        ControlToValidate="pass" Display="None" ClientValidationFunction="CustomValidatorPass_ServerValidate"
+        
         ValidationGroup="v1">
         </asp:CustomValidator>
       

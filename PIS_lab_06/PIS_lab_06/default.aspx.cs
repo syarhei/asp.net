@@ -10,17 +10,5 @@ namespace PIS_lab_06 {
         protected void Page_Load(object sender, EventArgs e) {
             
         }
-
-        // проверка простого числа
-        protected void CustomValidator1_ServerValidate(object source, ServerValidateEventArgs args) {
-            bool isSimple = true;
-            int digit = Convert.ToInt32(args.Value);
-            for (long i = 2; i < digit; i++)
-                if (digit % i == 0) {
-                    isSimple = false; // если это число не простое isSimple = false
-                    break;
-                }
-            if (!isSimple) args.IsValid = false;
-        }
     }
 }

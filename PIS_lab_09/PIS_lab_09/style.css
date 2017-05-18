@@ -1,0 +1,15 @@
+﻿body {
+}
+
+.button{
+background-color: bisque;
+width: 100px;
+height: 50px;
+font-family: 'Comic Sans MS';
+}
+
+.text{
+font-size: 18px;
+color: blueviolet;
+font-family: 'Comic Sans MS';
+}

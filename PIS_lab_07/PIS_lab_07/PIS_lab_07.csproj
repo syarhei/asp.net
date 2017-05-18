@@ -119,8 +119,12 @@
     <Content Include="2.aspx" />
     <Content Include="3.aspx" />
     <Content Include="4.aspx" />
+    <Content Include="5.aspx" />
+    <Content Include="6.aspx" />
     <Content Include="Global.asax" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="1.aspx.cs">
@@ -151,6 +155,23 @@
     <Compile Include="4.aspx.designer.cs">
       <DependentUpon>4.aspx</DependentUpon>
     </Compile>
+    <Compile Include="5.aspx.cs">
+      <DependentUpon>5.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="5.aspx.designer.cs">
+      <DependentUpon>5.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="6.aspx.cs">
+      <DependentUpon>6.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="6.aspx.designer.cs">
+      <DependentUpon>6.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -163,6 +184,7 @@
     </None>
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
     </None>
   </ItemGroup>
   <PropertyGroup>

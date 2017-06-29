@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="PIS_lab_13_dll.Service1" CodeBehind="Service1.svc.cs" %>

@@ -1,0 +1,18 @@
+﻿body {
+    margin: 0;
+    font-size: 16px;
+    font-family: 'Microsoft Sans Serif';
+    color: #3c3c3c;
+}
+
+.Header {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: beige;
+    font-weight: bold;
+}
+
+table {
+
+}

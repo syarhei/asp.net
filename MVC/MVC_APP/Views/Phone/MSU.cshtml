@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "phones";
+    Layout = null;
+}
+
+<head>
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/murkou.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <div class="Header">
+        <label>
+            Sergei Murkou MVC APP
+        </label>
+    </div>
+    <div>
+        @Html.ActionLink("add phone", "Add");
+    </div>
+</body>

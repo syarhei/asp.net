@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="Add">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="x" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="y" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Sub">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="x" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="y" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SubResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SubResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Mul">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="x" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="y" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MulResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="MulResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSessionValue">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetSessionValueResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetSessionValueResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetSessionValue">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="value" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetSessionValueResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetHistory">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetHistoryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetHistoryResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="AddSoapIn">
+    <wsdl:part name="parameters" element="tns:Add" />
+  </wsdl:message>
+  <wsdl:message name="AddSoapOut">
+    <wsdl:part name="parameters" element="tns:AddResponse" />
+  </wsdl:message>
+  <wsdl:message name="SubSoapIn">
+    <wsdl:part name="parameters" element="tns:Sub" />
+  </wsdl:message>
+  <wsdl:message name="SubSoapOut">
+    <wsdl:part name="parameters" element="tns:SubResponse" />
+  </wsdl:message>
+  <wsdl:message name="MulSoapIn">
+    <wsdl:part name="parameters" element="tns:Mul" />
+  </wsdl:message>
+  <wsdl:message name="MulSoapOut">
+    <wsdl:part name="parameters" element="tns:MulResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSessionValueSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSessionValue" />
+  </wsdl:message>
+  <wsdl:message name="GetSessionValueSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSessionValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetSessionValueSoapIn">
+    <wsdl:part name="parameters" element="tns:SetSessionValue" />
+  </wsdl:message>
+  <wsdl:message name="SetSessionValueSoapOut">
+    <wsdl:part name="parameters" element="tns:SetSessionValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetHistorySoapIn">
+    <wsdl:part name="parameters" element="tns:GetHistory" />
+  </wsdl:message>
+  <wsdl:message name="GetHistorySoapOut">
+    <wsdl:part name="parameters" element="tns:GetHistoryResponse" />
+  </wsdl:message>
+  <wsdl:portType name="MSUWSSoap">
+    <wsdl:operation name="Add">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">x + y</wsdl:documentation>
+      <wsdl:input message="tns:AddSoapIn" />
+      <wsdl:output message="tns:AddSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Sub">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">x - y</wsdl:documentation>
+      <wsdl:input message="tns:SubSoapIn" />
+      <wsdl:output message="tns:SubSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Mul">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">x * y</wsdl:documentation>
+      <wsdl:input message="tns:MulSoapIn" />
+      <wsdl:output message="tns:MulSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSessionValue">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Возвращает значение, хранящееся с помощью сессии</wsdl:documentation>
+      <wsdl:input message="tns:GetSessionValueSoapIn" />
+      <wsdl:output message="tns:GetSessionValueSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetSessionValue">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Устанавливает значение, хранящееся с помощью сессии</wsdl:documentation>
+      <wsdl:input message="tns:SetSessionValueSoapIn" />
+      <wsdl:output message="tns:SetSessionValueSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHistory">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Возвращает историю операций</wsdl:documentation>
+      <wsdl:input message="tns:GetHistorySoapIn" />
+      <wsdl:output message="tns:GetHistorySoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="MSUWSSoap" type="tns:MSUWSSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Add">
+      <soap:operation soapAction="http://tempuri.org/Add" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Sub">
+      <soap:operation soapAction="http://tempuri.org/Sub" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Mul">
+      <soap:operation soapAction="http://tempuri.org/Mul" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSessionValue">
+      <soap:operation soapAction="http://tempuri.org/GetSessionValue" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSessionValue">
+      <soap:operation soapAction="http://tempuri.org/SetSessionValue" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHistory">
+      <soap:operation soapAction="http://tempuri.org/GetHistory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="MSUWSSoap12" type="tns:MSUWSSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Add">
+      <soap12:operation soapAction="http://tempuri.org/Add" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Sub">
+      <soap12:operation soapAction="http://tempuri.org/Sub" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Mul">
+      <soap12:operation soapAction="http://tempuri.org/Mul" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSessionValue">
+      <soap12:operation soapAction="http://tempuri.org/GetSessionValue" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSessionValue">
+      <soap12:operation soapAction="http://tempuri.org/SetSessionValue" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHistory">
+      <soap12:operation soapAction="http://tempuri.org/GetHistory" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MSUWS">
+    <wsdl:port name="MSUWSSoap" binding="tns:MSUWSSoap">
+      <soap:address location="http://localhost:41305/MSUWS.asmx" />
+    </wsdl:port>
+    <wsdl:port name="MSUWSSoap12" binding="tns:MSUWSSoap12">
+      <soap12:address location="http://localhost:41305/MSUWS.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

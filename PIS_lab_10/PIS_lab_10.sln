@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PIS_lab_10", "PIS_lab_10\PIS_lab_10.csproj", "{030FD513-0559-4D2C-A71C-9424504FDF43}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PIS_lab_10_Web", "PIS_lab_10_Web\PIS_lab_10_Web.csproj", "{987E46DE-7D78-4DF5-8E95-B498538C4CD9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PIS_lab_10_WinForm", "PIS_lab_10_WinForm\PIS_lab_10_WinForm.csproj", "{A3FB71F7-9861-459C-9EC7-2A7EBF7BDA18}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{030FD513-0559-4D2C-A71C-9424504FDF43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{030FD513-0559-4D2C-A71C-9424504FDF43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{030FD513-0559-4D2C-A71C-9424504FDF43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{030FD513-0559-4D2C-A71C-9424504FDF43}.Release|Any CPU.Build.0 = Release|Any CPU
+		{987E46DE-7D78-4DF5-8E95-B498538C4CD9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{987E46DE-7D78-4DF5-8E95-B498538C4CD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{987E46DE-7D78-4DF5-8E95-B498538C4CD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{987E46DE-7D78-4DF5-8E95-B498538C4CD9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3FB71F7-9861-459C-9EC7-2A7EBF7BDA18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3FB71F7-9861-459C-9EC7-2A7EBF7BDA18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3FB71F7-9861-459C-9EC7-2A7EBF7BDA18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3FB71F7-9861-459C-9EC7-2A7EBF7BDA18}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

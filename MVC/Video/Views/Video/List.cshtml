@@ -1,0 +1,25 @@
+﻿
+@{
+    Layout = "Index.cshtml";
+}
+@section HEADER{SergeiMurkou VideoPlayer}
+@section LIST
+{
+    @foreach (var item in ViewBag.Catalogs) {
+        <tr>
+            <td>
+                <a target="video_frame" href='@Url.Action("GetVideo")?name=@item' style="margin: 5px 5px;" >@item</a>
+            </td>
+        </tr>
+    }
+    <tr>
+        <td>
+
+            @using (Html.BeginForm("Upload", "Video", FormMethod.Post, new { enctype = "multipart/form-data" })) {
+                <input type="file" class="btfile" name="upload" />
+                <input type="submit" class="btfile" value="загрузить" />
+            }
+        </td>
+    </tr>
+}
+@section VIDEO{<iframe name="video_frame" style="width:100%;height:100%" />}

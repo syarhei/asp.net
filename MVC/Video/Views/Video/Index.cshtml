@@ -1,0 +1,42 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>video</title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/murkou.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        html, body {
+            height: 100%;
+            width: 100%;
+        }
+
+        body, td, tbody, table, tr, h2 {
+            margin: 0px 0px 0px 0px;
+            padding: 0px 0px 0px 0px;
+            vertical-align: top;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="Header">@RenderSection("HEADER")</div>
+    <table style="height:100%;width:100%">
+        <tr>
+            <td width="30%" style="vertical-align:top">
+                <div style="margin: 10px 10px">
+                    <table>
+                        @RenderSection("LIST")
+                    </table>
+                </div>
+            </td>
+            <td width="70%" style="vertical-align:top">
+                @RenderSection("VIDEO");
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

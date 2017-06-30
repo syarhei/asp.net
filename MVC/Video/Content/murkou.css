@@ -1,0 +1,38 @@
+﻿body {
+    margin: 0;
+    font-size: 16px;
+    color: #3c3c3c;
+}
+
+.Header {
+    font-size: 20px;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: beige;
+    font-weight: 500;
+}
+
+.btfile {
+    font-size: 12px;
+    height: 20px;
+    margin: 5px 5px;
+}
+
+iframe {
+    border: none;
+}
+
+table {
+    border-collapse: collapse;
+    color: #444444;
+    margin-top: 20px;
+    width: 190px;
+    border: 2px solid #444444;
+}
+
+th, td {
+    border: 2px solid #444444;
+    padding: 15px;
+    text-align: left;
+}
